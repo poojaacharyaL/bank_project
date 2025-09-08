@@ -1,15 +1,17 @@
+---
 version: 3
-domain: banking.accounts.list_accounts
+domain: banking.list_accounts
 created_by: poojaacharyaL
 seed_examples:
   - context: >
       Generate valid response payloads for /api/accounts endpoint that returns
       a list of user accounts with complete details including account numbers,
       types, balances, IFSC codes, and statuses for Indian banking customers.
-      Account numbers should follow Indian banking formats (typically 11-16 digits),
-      and balances should be in INR format.
+      Account numbers should follow Indian banking formats (typically 11-16
+      digits),and balances should be in INR format.
     questions_and_answers:
-      - question: Create a response payload for a user with multiple savings and current accounts.
+      - question: Create a response payload for a user with multiple savings and
+                  current accounts.
         answer: |
           {
             "accounts": [
@@ -40,7 +42,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Accounts retrieved successfully"
           }
-      - question: Generate a response for a user with single savings account and fixed deposits.
+      - question: Generate a response for a user with single savings account and
+                  fixed deposits.
         answer: |
           {
             "accounts": [
@@ -106,10 +109,12 @@ seed_examples:
           }
 
   - context: >
-      Generate account list responses with various account types including NRI accounts,
-      and different balance scenarios. All responses should contain valid, active accounts only.
+      Generate account list responses with various account types including NRI
+      accounts,and different balance scenarios. All responses should contain
+      valid, active accounts only.
     questions_and_answers:
-      - question: Create a response for an NRI customer with foreign currency accounts.
+      - question: Create a response for an NRI customer with foreign currency
+                  accounts.
         answer: |
           {
             "accounts": [
@@ -142,7 +147,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Accounts retrieved successfully"
           }
-      - question: Generate a response including loan accounts with outstanding amounts.
+      - question: Generate a response including loan accounts with outstanding
+                  amounts.
         answer: |
           {
             "accounts": [
@@ -211,8 +217,8 @@ seed_examples:
 
   - context: >
       Generate account list responses with different bank branches, IFSC codes,
-      and various account types. Include variations in balance formats and account naming
-      conventions used by different Indian banks.
+      and various account types. Include variations in balance formats and
+      account naming conventions used by different Indian banks.
     questions_and_answers:
       - question: Create a response with accounts from multiple bank branches.
         answer: |
@@ -245,7 +251,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Accounts retrieved successfully"
           }
-      - question: Generate a response with different account types from same branch.
+      - question: Generate a response with different account types from same
+                  branch.
         answer: |
           {
             "accounts": [
@@ -277,7 +284,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Accounts retrieved successfully"
           }
-      - question: Provide a response with zero balance and minimal balance accounts.
+      - question: Provide a response with zero balance and minimal balance
+                  accounts.
         answer: |
           {
             "accounts": [
@@ -312,10 +320,12 @@ seed_examples:
           }
 
   - context: >
-      Generate account list responses for senior citizens and special account categories
-      including recurring deposits and special savings schemes with interest rates.
+      Generate account list responses for senior citizens and special account
+      categories including recurring deposits and special savings schemes with
+      interest rates.
     questions_and_answers:
-      - question: Create a response for a senior citizen with special interest rate accounts.
+      - question: Create a response for a senior citizen with special interest
+                  rate accounts.
         answer: |
           {
             "accounts": [
@@ -349,7 +359,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Accounts retrieved successfully"
           }
-      - question: Generate a response with recurring deposit accounts and savings.
+      - question: Generate a response with recurring deposit accounts and
+                  savings.
         answer: |
           {
             "accounts": [
@@ -382,7 +393,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Accounts retrieved successfully"
           }
-      - question: Provide a response with government scheme accounts like PPF and SSY.
+      - question: Provide a response with government scheme accounts like PPF
+                   and SSY.
         answer: |
           {
             "accounts": [
@@ -419,10 +431,12 @@ seed_examples:
           }
 
   - context: >
-      Generate account list responses for corporate accounts, trust accounts, and other
-      institutional banking products with specialized features and higher balance ranges.
+      Generate account list responses for corporate accounts, trust accounts,
+      and other institutional banking products with specialized features and
+      higher balance ranges.
     questions_and_answers:
-      - question: Create a response for corporate banking accounts with high balances.
+      - question: Create a response for corporate banking accounts with high
+                  balances.
         answer: |
           {
             "accounts": [
@@ -523,11 +537,10 @@ seed_examples:
             "message": "Accounts retrieved successfully"
           }
 
-document_outline: Account listing response examples for Indian banking customers with various account types and statuses
+document_outline: Account listing response examples for Indian banking customers
+                  with various account types and statuses
 document:
   repo: https://github.com/poojaacharyaL/bank_project.git
   commit: 4ff1b4f
 patterns:
   - general/banking_test_data.md
-
-

@@ -1,15 +1,19 @@
+---
 version: 3
-domain: banking.transactions.fund_transfer
+domain: banking.fund_transfer
 created_by: poojaacharyaL
 seed_examples:
   - context: >
-      Fund transfers using NEFT (National Electronic Funds Transfer) allow standard
-      electronic transactions between banks in batches. Transactions include sender and
-      receiver account numbers, IFSC codes, amount, currency, transfer type, status,
-      transfer date, reference message, and response code. NEFT is widely used for
-      retail and business payments with typical processing times.
+      Fund transfers using NEFT (National Electronic Funds Transfer) allow
+      standard electronic transactions between banks in batches. Transactions
+      include sender and receiver account numbers, IFSC codes, amount, currency,
+      transfer type, status,transfer date, reference message, and response code.
+      NEFT is widely used for retail and business payments with typical
+      processing times.
     questions_and_answers:
-      - question: Generate a successful NEFT transfer test data with sender and receiver accounts, amount, currency, and a reference message for synthetic data generation.
+      - question: Generate a successful NEFT transfer test data with sender and
+                  receiver accounts, amount, currency, and a reference message
+                  for synthetic data generation.
         answer: |
           {
             "transactionId": "NEFT240115103015123456",
@@ -28,7 +32,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Fund transfer successful"
           }
-      - question: Generate a NEFT transfer test data showing the system recording the transfer date and reference message in detail.
+      - question: Generate a NEFT transfer test data showing the system
+                  recording the transfer date and reference message in detail.
         answer: |
           {
             "transactionId": "NEFT240115142045654321",
@@ -47,7 +52,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Fund transfer successful"
           }
-      - question: Generate a NEFT transfer template showing a typical business payment scenario including sender and receiver IFSC codes.
+      - question: Generate a NEFT transfer template showing a typical business
+                  payment scenario including sender and receiver IFSC codes.
         answer: |
           {
             "transactionId": "NEFT240115160030987654",
@@ -68,12 +74,14 @@ seed_examples:
           }
 
   - context: >
-      RTGS (Real-Time Gross Settlement) is used for high-value transactions in India.
-      RTGS transactions are processed individually in real-time. Required fields include
-      transaction ID, sender and receiver accounts, IFSC codes, amount, currency,
-      transfer type, status, transfer date, and reference message.
+      RTGS (Real-Time Gross Settlement) is used for high-value transactions in
+      India.RTGS transactions are processed individually in real-time. Required
+      fields include transaction ID, sender and receiver accounts, IFSC codes,
+      amount, currency,transfer type, status, transfer date, and reference
+      message.
     questions_and_answers:
-      - question: Generate a successful RTGS high-value transfer with all standard fields.
+      - question: Generate a successful RTGS high-value transfer with all
+                  standard fields.
         answer: |
           {
             "transactionId": "RTGS240115110045112233",
@@ -92,7 +100,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Fund transfer successful"
           }
-      - question: Generate RTGS transfer template for a corporate transaction including reference message and timestamp.
+      - question: Generate RTGS transfer template for a corporate transaction
+                  including reference message and timestamp.
         answer: |
           {
             "transactionId": "RTGS240115150020445566",
@@ -111,7 +120,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Fund transfer successful"
           }
-      - question: Generate RTGS transfer data template for synthetic data with real-world high-value transfer details.
+      - question: Generate RTGS transfer data template for synthetic data with
+                  real-world high-value transfer details.
         answer: |
           {
             "transactionId": "RTGS240115093015778899",
@@ -132,12 +142,13 @@ seed_examples:
           }
 
   - context: >
-      IMPS (Immediate Payment Service) allows instant 24/7 interbank transfers via
-      mobile or internet banking. Each transaction includes sender and receiver account
-      details, IFSC codes, amount, currency, transfer type, status, transfer date,
-      and reference messages.
+      IMPS (Immediate Payment Service) allows instant 24/7 interbank transfers
+      via mobile or internet banking. Each transaction includes sender and
+      receiver account details, IFSC codes, amount, currency, transfer type,
+      status, transfer date,and reference messages.
     questions_and_answers:
-      - question: Generate an IMPS instant transfer test data template for synthetic data.
+      - question: Generate an IMPS instant transfer test data template for
+                  synthetic data.
         answer: |
           {
             "transactionId": "IMPS240115203045334455",
@@ -156,7 +167,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Fund transfer successful"
           }
-      - question: Generate IMPS test data with synthetic account numbers and reference message.
+      - question: Generate IMPS test data with synthetic account numbers and
+                  reference message.
         answer: |
           {
             "transactionId": "IMPS240115221520667788",
@@ -175,7 +187,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Fund transfer successful"
           }
-      - question: Generate a detailed IMPS transfer scenario template for LLM training.
+      - question: Generate a detailed IMPS transfer scenario template for LLM
+                  training.
         answer: |
           {
             "transactionId": "IMPS240115194030990011",
@@ -196,11 +209,13 @@ seed_examples:
           }
 
   - context: >
-      Scheduled fund transfers allow users to set up future NEFT or IMPS transfers.
-      These transfers require sender and receiver details, IFSC codes, amount, currency,
-      transfer type, scheduled date, reference message, and status.
+      Scheduled fund transfers allow users to set up future NEFT or IMPS
+      transfers.These transfers require sender and receiver details, IFSC codes,
+      amount, currency,transfer type, scheduled date, reference message, and
+      status.
     questions_and_answers:
-      - question: Generate a scheduled NEFT transfer template for synthetic data generation.
+      - question: Generate a scheduled NEFT transfer template for synthetic data
+                  generation.
         answer: |
           {
             "transactionId": "SCHNEFT240120100000223344",
@@ -219,7 +234,7 @@ seed_examples:
             "responseCode": "202",
             "message": "Fund transfer scheduled"
           }
-      - question: Generate a scheduled IMPS transfer template for synthetic data.
+      - question: Generate a scheduled IMPS transfer template for synthetic data
         answer: |
           {
             "transactionId": "SCHIMPS240125090000556677",
@@ -238,7 +253,8 @@ seed_examples:
             "responseCode": "202",
             "message": "Fund transfer scheduled"
           }
-      - question: Generate scheduled fund transfer template including all required fields for LLM training.
+      - question: Generate scheduled fund transfer template including all
+                  required fields for LLM training.
         answer: |
           {
             "transactionId": "SCHNEFT240201150000889900",
@@ -259,9 +275,10 @@ seed_examples:
           }
 
   - context: >
-      UPI (Unified Payments Interface) enables instant real-time payments between bank accounts
-      using UPI IDs or QR codes. Transactions include sender and receiver details, amount,
-      currency, transfer type, status, transfer date, UPI reference ID, and response message.
+      UPI (Unified Payments Interface) enables instant real-time payments
+      between bank accounts using UPI IDs or QR codes. Transactions include
+      sender and receiver details, amount,currency, transfer type, status,
+      transfer date, UPI reference ID, and response message.
     questions_and_answers:
       - question: Generate a successful UPI payment transaction using UPI ID.
         answer: |
@@ -318,11 +335,11 @@ seed_examples:
             "message": "UPI transaction successful"
           }
 
-document_outline: Fund transfer test data generation examples including NEFT, RTGS, IMPS, scheduled, and UPI transactions with realistic account details for LLM training.
+document_outline: Fund transfer test data generation examples including NEFT,
+                  RTGS, IMPS, scheduled, and UPI transactions with realistic
+                  account details for LLM training.
 document:
   repo: https://github.com/poojaacharyaL/bank_project.git
   commit: 4ff1b4f
 patterns:
   - general/banking_test_data.md
-
-

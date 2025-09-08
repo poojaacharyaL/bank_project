@@ -1,14 +1,18 @@
+---
 version: 3
-domain: banking.authentication.account_creation
+domain: banking.account_creation
 created_by: poojaacharyaL
+
 seed_examples:
   - context: >
-      Generate valid response payloads for /api/account_creation endpoint that handles
-      successful savings and current account creation for Indian banking customers.
-      Responses should include account details, account numbers, IFSC codes, and
-      successful status messages with 200 response codes.
+      Generate valid response payloads for /api/account_creation endpoint that
+      handles successful savings and current account creation for Indian banking
+      customers. Responses should include account details, account numbers, IFSC
+      codes, and successful status messages with 200 response codes.
     questions_and_answers:
-      - question: Create a response for successful savings account opening with complete account details.
+      - question: >
+          Create a response for successful savings account opening with complete
+          account details.
         answer: |
           {
             "accountNumber": "50100234567890",
@@ -25,7 +29,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Savings account created successfully"
           }
-      - question: Generate response for current account creation for business customers.
+      - question: >
+          Generate response for current account creation for business customers.
         answer: |
           {
             "accountNumber": "60100987654321",
@@ -42,7 +47,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Current account created successfully for business"
           }
-      - question: Provide response for zero balance savings account opening.
+      - question: >
+          Provide response for zero balance savings account opening.
         answer: |
           {
             "accountNumber": "70100123456789",
@@ -60,77 +66,84 @@ seed_examples:
             "message": "Zero balance savings account created successfully"
           }
 
-  - context: >
-      Generate account creation responses for fixed deposits and recurring deposits
-      with specific tenure, interest rates, and maturity details. Include all
-      necessary deposit account parameters for successful creation.
-    questions_and_answers:
-      - question: Create response for 1-year fixed deposit account opening.
-        answer: |
-          {
-            "accountNumber": "FD123456789012",
-            "accountType": "Fixed Deposit",
-            "accountName": "1 Year Fixed Deposit",
-            "IFSC Code": "SBIN0012345",
-            "branch": "Mumbai Main Branch",
-            "depositAmount": 500000.00,
-            "tenureMonths": 12,
-            "interestRate": 6.75,
-            "maturityDate": "2025-01-15",
-            "maturityAmount": 534375.00,
-            "currency": "INR",
-            "status": "ACTIVE",
-            "createdDate": "2024-01-15T14:20:30Z",
-            "customerId": "CUST10013579",
-            "responseCode": "200",
-            "message": "Fixed deposit account created successfully"
-          }
-      - question: Generate response for recurring deposit account creation with monthly installments.
-        answer: |
-          {
-            "accountNumber": "RD987654321098",
-            "accountType": "Recurring Deposit",
-            "accountName": "Monthly Recurring Deposit",
-            "IFSC Code": "HDFC0000123",
-            "branch": "Bangalore Central",
-            "monthlyInstallment": 10000.00,
-            "tenureMonths": 24,
-            "interestRate": 6.25,
-            "maturityDate": "2026-01-15",
-            "currency": "INR",
-            "status": "ACTIVE",
-            "createdDate": "2024-01-15T15:30:45Z",
-            "customerId": "CUST10011223",
-            "responseCode": "200",
-            "message": "Recurring deposit account created successfully"
-          }
-      - question: Provide response for senior citizen fixed deposit with special interest rates.
-        answer: |
-          {
-            "accountNumber": "FDSC500123456",
-            "accountType": "Fixed Deposit",
-            "accountName": "Senior Citizen Special FD",
-            "IFSC Code": "ICICI0000456",
-            "branch": "Delhi South Branch",
-            "depositAmount": 800000.00,
-            "tenureMonths": 36,
-            "interestRate": 8.25,
-            "maturityDate": "2027-01-15",
-            "maturityAmount": 1026600.00,
-            "currency": "INR",
-            "status": "ACTIVE",
-            "createdDate": "2024-01-15T16:45:20Z",
-            "customerId": "CUST10033445",
-            "holderAge": 68,
-            "responseCode": "200",
-            "message": "Senior citizen fixed deposit created successfully"
-          }
+  # - context: >
+  #     Generate account creation responses for fixed deposits and recurring
+  #     deposits with specific tenure, interest rates, and maturity details.
+  #     Include all necessary deposit account parameters for successful creation
+  #   questions_and_answers:
+  #     - question: >
+  #         Create response for 1-year fixed deposit account opening.
+  #       answer: |
+  #         {
+  #           "accountNumber": "FD123456789012",
+  #           "accountType": "Fixed Deposit",
+  #           "accountName": "1 Year Fixed Deposit",
+  #           "IFSC Code": "SBIN0012345",
+  #           "branch": "Mumbai Main Branch",
+  #           "depositAmount": 500000.00,
+  #           "tenureMonths": 12,
+  #           "interestRate": 6.75,
+  #           "maturityDate": "2025-01-15",
+  #           "maturityAmount": 534375.00,
+  #           "currency": "INR",
+  #           "status": "ACTIVE",
+  #           "createdDate": "2024-01-15T14:20:30Z",
+  #           "customerId": "CUST10013579",
+  #           "responseCode": "200",
+  #           "message": "Fixed deposit account created successfully"
+  #         }
+  #     - question: >
+  #         Generate response for recurring deposit account creation with
+            #monthly
+  #         installments.
+  #       answer: |
+  #         {
+  #           "accountNumber": "RD987654321098",
+  #           "accountType": "Recurring Deposit",
+  #           "accountName": "Monthly Recurring Deposit",
+  #           "IFSC Code": "HDFC0000123",
+  #           "branch": "Bangalore Central",
+  #           "monthlyInstallment": 10000.00,
+  #           "tenureMonths": 24,
+  #           "interestRate": 6.25,
+  #           "maturityDate": "2026-01-15",
+  #           "currency": "INR",
+  #           "status": "ACTIVE",
+  #           "createdDate": "2024-01-15T15:30:45Z",
+  #           "customerId": "CUST10011223",
+  #           "responseCode": "200",
+  #           "message": "Recurring deposit account created successfully"
+  #         }
+  #     - question: >
+  #         Provide response for senior citizen fixed deposit with special
+  #         interest rates.
+  #       answer: |
+  #         {
+  #           "accountNumber": "FDSC500123456",
+  #           "accountType": "Fixed Deposit",
+  #           "accountName": "Senior Citizen Special FD",
+  #           "IFSC Code": "ICICI0000456",
+  #           "branch": "Delhi South Branch",
+  #           "depositAmount": 800000.00,
+  #           "tenureMonths": 36,
+  #           "interestRate": 8.25,
+  #           "maturityDate": "2027-01-15",
+  #           "maturityAmount": 1026600.00,
+  #           "currency": "INR",
+  #           "status": "ACTIVE",
+  #           "createdDate": "2024-01-15T16:45:20Z",
+  #           "customerId": "CUST10033445",
+  #           "holderAge": 68,
+  #           "responseCode": "200",
+  #           "message": "Senior citizen fixed deposit created successfully"
+  #         }
 
   - context: >
       Generate account creation responses for NRI banking products including NRE
-      and NRO accounts with foreign currency details and NRI-specific parameters.
+      and NRO accounts with foreign currency details and NRI-specific parameters
     questions_and_answers:
-      - question: Create response for NRE savings account opening for NRIs.
+      - question: >
+          Create response for NRE savings account opening for NRIs.
         answer: |
           {
             "accountNumber": "NRE1234567890",
@@ -149,7 +162,8 @@ seed_examples:
             "responseCode": "200",
             "message": "NRE savings account created successfully"
           }
-      - question: Generate response for NRO current account creation.
+      - question: >
+          Generate response for NRO current account creation.
         answer: |
           {
             "accountNumber": "NRO9876543210",
@@ -167,7 +181,8 @@ seed_examples:
             "responseCode": "200",
             "message": "NRO current account created successfully"
           }
-      - question: Provide response for NRI fixed deposit account in foreign currency.
+      - question: >
+          Provide response for NRI fixed deposit account in foreign currency.
         answer: |
           {
             "accountNumber": "FDNRI500123456",
@@ -193,7 +208,8 @@ seed_examples:
       special category accounts including PPF, SSY, senior citizen accounts,
       and other long-term investment products with specific scheme rules.
     questions_and_answers:
-      - question: Create response for Public Provident Fund (PPF) account opening.
+      - question: >
+          Create response for Public Provident Fund (PPF) account opening.
         answer: |
           {
             "accountNumber": "PPF123456789",
@@ -212,7 +228,8 @@ seed_examples:
             "responseCode": "200",
             "message": "PPF account created successfully"
           }
-      - question: Generate response for Sukanya Samriddhi Yojana (SSY) account creation.
+      - question: >
+          Generate response for Sukanya Samriddhi Yojana (SSY) account creation.
         answer: |
           {
             "accountNumber": "SSY987654321",
@@ -233,7 +250,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Sukanya Samriddhi Yojana account created successfully"
           }
-      - question: Provide response for senior citizen savings scheme account opening.
+      - question: >
+          Provide response for senior citizen savings scheme account opening.
         answer: |
           {
             "accountNumber": "SCSS500123456",
@@ -251,15 +269,89 @@ seed_examples:
             "customerId": "CUST10077990",
             "holderAge": 65,
             "responseCode": "200",
-            "message": "Senior citizen savings scheme account created successfully"
+            "message": "Senior citizen savings scheme account created
+                        successfully"
           }
 
   - context: >
-      Generate account creation responses for corporate, business, and specialized
-      banking products including current accounts for companies, startup accounts,
-      and other institutional banking products with business-specific parameters.
+      Generate account creation responses for fixed deposits and recurring
+      deposits with tenure, interest rates, and maturity details. Responses
+      should include deposit amount, tenure, interest rate, maturity date,
+      and successful status codes.
     questions_and_answers:
-      - question: Create response for corporate current account opening for a private limited company.
+      - question: Create a response for a 1-year fixed deposit account opening.
+        answer: |
+          {
+            "accountNumber": "FD123456789012",
+            "accountType": "Fixed Deposit",
+            "accountName": "1 Year Fixed Deposit",
+            "IFSC Code": "SBIN0012345",
+            "branch": "Mumbai Main Branch",
+            "depositAmount": 500000.00,
+            "tenureMonths": 12,
+            "interestRate": 6.75,
+            "maturityDate": "2025-01-15",
+            "maturityAmount": 534375.00,
+            "currency": "INR",
+            "status": "ACTIVE",
+            "createdDate": "2024-01-15T14:20:30Z",
+            "customerId": "CUST10013579",
+            "responseCode": "200",
+            "message": "Fixed deposit account created successfully"
+          }
+      - question: Generate a response for a recurring deposit account with
+                  monthly installments.
+        answer: |
+          {
+            "accountNumber": "RD987654321098",
+            "accountType": "Recurring Deposit",
+            "accountName": "Monthly Recurring Deposit",
+            "IFSC Code": "HDFC0000123",
+            "branch": "Bangalore Central",
+            "monthlyInstallment": 10000.00,
+            "tenureMonths": 24,
+            "interestRate": 6.25,
+            "maturityDate": "2026-01-15",
+            "currency": "INR",
+            "status": "ACTIVE",
+            "createdDate": "2024-01-15T15:30:45Z",
+            "customerId": "CUST10011223",
+            "responseCode": "200",
+            "message": "Recurring deposit account created successfully"
+          }
+
+      - question: Provide a response for senior citizen fixed deposit with
+                  special interest rate benefits.
+        answer: |
+          {
+            "accountNumber": "FDSC500123456",
+            "accountType": "Fixed Deposit",
+            "accountName": "Senior Citizen Special FD",
+            "IFSC Code": "ICICI0000456",
+            "branch": "Delhi South Branch",
+            "depositAmount": 800000.00,
+            "tenureMonths": 36,
+            "interestRate": 8.25,
+            "maturityDate": "2027-01-15",
+            "maturityAmount": 1026600.00,
+            "currency": "INR",
+            "status": "ACTIVE",
+            "createdDate": "2024-01-15T16:45:20Z",
+            "customerId": "CUST10033445",
+            "holderAge": 68,
+            "responseCode": "200",
+            "message": "Senior citizen fixed deposit created successfully"
+          }
+
+  - context: >
+      Generate account creation responses for corporate, business, and
+      specialized banking products including current accounts for companies,
+      startup accounts,and other institutional banking products with
+      business-specific parameters.
+    questions_and_answers:
+      - question: >
+          Create response for corporate current account opening for a private
+          limited company.
         answer: |
           {
             "accountNumber": "CORP1001234567",
@@ -274,11 +366,15 @@ seed_examples:
             "customerId": "CORP10012345",
             "companyName": "Tech Solutions Pvt Ltd",
             "companyCIN": "U72900MH2020PTC123456",
-            "authorizedSignatories": ["Rajesh Mehta", "Priya Singh"],
+            "authorizedSignatories": [
+              "Rajesh Mehta",
+              "Priya Singh"
+            ],
             "responseCode": "200",
             "message": "Corporate current account created successfully"
           }
-      - question: Generate response for startup business account opening.
+      - question: >
+          Generate response for startup business account opening.
         answer: |
           {
             "accountNumber": "STARTUP800123",
@@ -297,7 +393,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Startup current account created successfully"
           }
-      - question: Provide response for trust account opening for educational trust.
+      - question: >
+          Provide response for trust account opening for educational trust.
         answer: |
           {
             "accountNumber": "TRUST500123456",
@@ -313,16 +410,22 @@ seed_examples:
             "customerId": "TRUST10024680",
             "trustName": "Sharma Educational Trust",
             "trustRegistration": "REG-1234/2020",
-            "trustees": ["Dr. Amit Sharma", "Mrs. Sunita Sharma"],
+            "trustees": [
+              "Dr. Amit Sharma",
+              "Mrs. Sunita Sharma"
+            ],
             "responseCode": "200",
             "message": "Trust savings account created successfully"
           }
 
-document_outline: Account creation response examples for various Indian banking products including savings, current, fixed deposits, NRI accounts, government schemes, and corporate accounts with successful status codes.
+document_outline: >
+  Account creation response examples for various Indian banking products
+  including savings, current, fixed deposits, NRI accounts, government schemes,
+  and corporate accounts with successful status codes.
+
 document:
   repo: https://github.com/poojaacharyaL/bank_project.git
   commit: 4ff1b4f
+
 patterns:
-  - general/banking_test_data.md
-
-
+  - banking_test_data.md

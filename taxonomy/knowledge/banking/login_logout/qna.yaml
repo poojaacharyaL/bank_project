@@ -1,5 +1,6 @@
+---
 version: 3
-domain: banking.authentication.login_logout
+domain: banking.login_logout
 created_by: poojaacharyaL
 seed_examples:
   - context: >
@@ -14,13 +15,15 @@ seed_examples:
             "email": "rohit.sharma@example.com",
             "password": "Rohit#2024"
           }
-      - question: Generate a login payload for a female user with a strong password.
+      - question: Generate a login payload for a female user with a strong
+                  password.
         answer: |
           {
             "email": "priya.singh@example.com",
             "password": "Priya*789"
           }
-      - question: Provide a login example for a user with a common Indian last name.
+      - question: Provide a login example for a user with a common Indian last
+                  name.
         answer: |
           {
             "email": "anil.kumar@example.com",
@@ -64,7 +67,7 @@ seed_examples:
             "email": "anjali.mehta01@example.com",
             "password": "Anjali$4567"
           }
-      - question: Provide a login payload with dot-separated first and last name.
+      - question: Provide a login payload with dot-separated first and last name
         answer: |
           {
             "email": "rakesh.sharma01@example.com",
@@ -74,7 +77,8 @@ seed_examples:
       Generate login payloads for professional users with formal email naming
       conventions and strong security-compliant passwords.
     questions_and_answers:
-      - question: Create a login payload for a user with a professional email format.
+      - question: Create a login payload for a user with a professional email
+                  format.
         answer: |
           {
             "email": "rajesh.kapoor@example.com",
@@ -86,7 +90,7 @@ seed_examples:
             "email": "sneha.chatterjee@example.com",
             "password": "SnehaChat$567"
           }
-      - question: Provide a login payload for a user with abbreviated first name.
+      - question: Provide a login payload for a user with abbreviated first name
         answer: |
           {
             "email": "vk.menon@example.com",
@@ -114,12 +118,10 @@ seed_examples:
             "email": "deborah.ganguly@example.com",
             "password": "DeborahWB@456"
           }
-document_outline: Valid login endpoint payload examples for Indian banking authentication
+document_outline: Valid login endpoint payload examples for Indian banking
+                  authentication
 document:
   repo: https://github.com/poojaacharyaL/bank_project.git
   commit: 4ff1b4f
 patterns:
   - general/banking_test_data.md
-
-
-

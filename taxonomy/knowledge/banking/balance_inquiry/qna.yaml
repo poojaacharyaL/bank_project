@@ -1,13 +1,15 @@
+---
 version: 3
-domain: banking.accounts.balance_inquiry
+domain: banking.balance_inquiry
 created_by: poojaacharyaL
 seed_examples:
   - context: >
       Generate valid response payloads for /api/balance endpoint that returns
-      consistent account balance information for Indian banking customers. 
+      consistent account balance information for Indian banking customers.
       Balance amounts remain the same unless transactions occur.
     questions_and_answers:
-      - question: Create a balance inquiry response for savings account 50100234567890.
+      - question: Create a balance inquiry response for savings account
+                  50100234567890.
         answer: |
           {
             "accountNumber": "50100234567890",
@@ -37,7 +39,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Balance inquiry successful"
           }
-      - question: Provide balance inquiry for zero balance account 50100123456789.
+      - question: Provide balance inquiry for zero balance account
+                  50100123456789.
         answer: |
           {
             "accountNumber": "50100123456789",
@@ -54,8 +57,9 @@ seed_examples:
           }
 
   - context: >
-      Generate balance inquiry responses for fixed deposit and recurring deposit accounts.
-      FD balances remain constant until maturity, RD balances increase with each installment.
+      Generate balance inquiry responses for fixed deposit and recurring deposit
+      accounts.FD balances remain constant until maturity, RD balances increase
+      with each installment.
     questions_and_answers:
       - question: Create balance response for fixed deposit FD1234567890.
         answer: |
@@ -74,7 +78,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Balance inquiry successful"
           }
-      - question: Generate balance response for matured fixed deposit FD9876543210.
+      - question: Generate balance response for matured fixed deposit
+                  FD9876543210.
         answer: |
           {
             "accountNumber": "FD9876543210",
@@ -110,8 +115,9 @@ seed_examples:
           }
 
   - context: >
-      Generate balance inquiry responses for loan accounts. Outstanding amounts decrease
-      with each EMI payment. Include home loans, personal loans, and vehicle loans.
+      Generate balance inquiry responses for loan accounts. Outstanding amounts
+      decrease with each EMI payment. Include home loans, personal loans, and
+      vehicle loans.
     questions_and_answers:
       - question: Create balance response for home loan LN12345678901.
         answer: |
@@ -171,10 +177,12 @@ seed_examples:
           }
 
   - context: >
-      Generate balance inquiry responses showing consistent balances across multiple inquiries
-      for the same accounts. Balances remain unchanged without transactions.
+      Generate balance inquiry responses showing consistent balances across
+      multiple inquiries for the same accounts. Balances remain unchanged
+      without transactions.
     questions_and_answers:
-      - question: Show balance consistency for savings account across multiple inquiries.
+      - question: Show balance consistency for savings account across multiple
+                  inquiries.
         answer: |
           {
             "accountNumber": "50100234567890",
@@ -189,7 +197,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Balance inquiry successful"
           }
-      - question: Demonstrate consistent balance for current account on repeated inquiry.
+      - question: Demonstrate consistent balance for current account on repeated
+                  inquiry.
         answer: |
           {
             "accountNumber": "50100987654321",
@@ -204,7 +213,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Balance inquiry successful"
           }
-      - question: Confirm fixed deposit balance remains unchanged without transactions.
+      - question: Confirm fixed deposit balance remains unchanged without
+                  transactions.
         answer: |
           {
             "accountNumber": "FD1234567890",
@@ -223,8 +233,9 @@ seed_examples:
           }
 
   - context: >
-      Generate balance inquiry responses for special account categories with consistent
-      balance information. Include timestamp updates but same balance amounts.
+      Generate balance inquiry responses for special account categories with
+      consistent balance information. Include timestamp updates but same balance
+      amounts.
     questions_and_answers:
       - question: Create balance response for NRE savings account NRI1234567890.
         answer: |
@@ -259,7 +270,8 @@ seed_examples:
             "responseCode": "200",
             "message": "Balance inquiry successful"
           }
-      - question: Provide balance response for senior citizen account 90100123456789.
+      - question: Provide balance response for senior citizen account
+                  90100123456789.
         answer: |
           {
             "accountNumber": "90100123456789",
@@ -276,11 +288,10 @@ seed_examples:
             "message": "Balance inquiry successful"
           }
 
-document_outline: Consistent balance inquiry response examples showing unchanged balances across multiple inquiries for Indian banking accounts
+document_outline: Consistent balance inquiry response examples showing unchanged
+                  balances across multiple inquiries for Indian banking accounts
 document:
   repo: https://github.com/poojaacharyaL/bank_project.git
   commit: 4ff1b4f
 patterns:
   - general/banking_test_data.md
-
-
