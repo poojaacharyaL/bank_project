@@ -323,4 +323,4 @@ document:
   repo: https://github.com/poojaacharyaL/bank_project.git
   commit: efae5d5
 patterns:
-  - knowledge/banking_test_data.md
+  - banking/knowledge/general/banking_test_data.md
