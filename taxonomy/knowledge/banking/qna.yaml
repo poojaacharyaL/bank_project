@@ -1,5 +1,8 @@
+version: 3
+domain: banking.knowledge
+created_by: poojaacharyaL
 patterns:
-  - general/banking_test_data.md           # shared data
+  - general/banking_test_data.md
   - authentication/registration/account_creation/qna.yaml
   - authentication/login_logout/qna.yaml
   - accounts/list_accounts/qna.yaml
