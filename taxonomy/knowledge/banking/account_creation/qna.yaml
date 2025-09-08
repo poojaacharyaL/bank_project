@@ -428,4 +428,4 @@ document:
   commit: 4ff1b4f
 
 patterns:
-  - banking_test_data.md
+  - knowledge/banking/account_creation/banking_test_data.md
