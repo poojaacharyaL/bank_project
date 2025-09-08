@@ -66,77 +66,77 @@ seed_examples:
             "message": "Zero balance savings account created successfully"
           }
 
-  # - context: >
-  #     Generate account creation responses for fixed deposits and recurring
-  #     deposits with specific tenure, interest rates, and maturity details.
-  #     Include all necessary deposit account parameters for successful creation
-  #   questions_and_answers:
-  #     - question: >
-  #         Create response for 1-year fixed deposit account opening.
-  #       answer: |
-  #         {
-  #           "accountNumber": "FD123456789012",
-  #           "accountType": "Fixed Deposit",
-  #           "accountName": "1 Year Fixed Deposit",
-  #           "IFSC Code": "SBIN0012345",
-  #           "branch": "Mumbai Main Branch",
-  #           "depositAmount": 500000.00,
-  #           "tenureMonths": 12,
-  #           "interestRate": 6.75,
-  #           "maturityDate": "2025-01-15",
-  #           "maturityAmount": 534375.00,
-  #           "currency": "INR",
-  #           "status": "ACTIVE",
-  #           "createdDate": "2024-01-15T14:20:30Z",
-  #           "customerId": "CUST10013579",
-  #           "responseCode": "200",
-  #           "message": "Fixed deposit account created successfully"
-  #         }
-  #     - question: >
-  #         Generate response for recurring deposit account creation with
-            #monthly
-  #         installments.
-  #       answer: |
-  #         {
-  #           "accountNumber": "RD987654321098",
-  #           "accountType": "Recurring Deposit",
-  #           "accountName": "Monthly Recurring Deposit",
-  #           "IFSC Code": "HDFC0000123",
-  #           "branch": "Bangalore Central",
-  #           "monthlyInstallment": 10000.00,
-  #           "tenureMonths": 24,
-  #           "interestRate": 6.25,
-  #           "maturityDate": "2026-01-15",
-  #           "currency": "INR",
-  #           "status": "ACTIVE",
-  #           "createdDate": "2024-01-15T15:30:45Z",
-  #           "customerId": "CUST10011223",
-  #           "responseCode": "200",
-  #           "message": "Recurring deposit account created successfully"
-  #         }
-  #     - question: >
-  #         Provide response for senior citizen fixed deposit with special
-  #         interest rates.
-  #       answer: |
-  #         {
-  #           "accountNumber": "FDSC500123456",
-  #           "accountType": "Fixed Deposit",
-  #           "accountName": "Senior Citizen Special FD",
-  #           "IFSC Code": "ICICI0000456",
-  #           "branch": "Delhi South Branch",
-  #           "depositAmount": 800000.00,
-  #           "tenureMonths": 36,
-  #           "interestRate": 8.25,
-  #           "maturityDate": "2027-01-15",
-  #           "maturityAmount": 1026600.00,
-  #           "currency": "INR",
-  #           "status": "ACTIVE",
-  #           "createdDate": "2024-01-15T16:45:20Z",
-  #           "customerId": "CUST10033445",
-  #           "holderAge": 68,
-  #           "responseCode": "200",
-  #           "message": "Senior citizen fixed deposit created successfully"
-  #         }
+  - context: >
+      Generate account creation responses for fixed deposits and recurring
+      deposits with specific tenure, interest rates, and maturity details.
+      Include all necessary deposit account parameters for successful creation
+    questions_and_answers:
+      - question: >
+          Create response for 1-year fixed deposit account opening.
+        answer: |
+          {
+            "accountNumber": "FD123456789012",
+            "accountType": "Fixed Deposit",
+            "accountName": "1 Year Fixed Deposit",
+            "IFSC Code": "SBIN0012345",
+            "branch": "Mumbai Main Branch",
+            "depositAmount": 500000.00,
+            "tenureMonths": 12,
+            "interestRate": 6.75,
+            "maturityDate": "2025-01-15",
+            "maturityAmount": 534375.00,
+            "currency": "INR",
+            "status": "ACTIVE",
+            "createdDate": "2024-01-15T14:20:30Z",
+            "customerId": "CUST10013579",
+            "responseCode": "200",
+            "message": "Fixed deposit account created successfully"
+          }
+      - question: >
+          Generate response for recurring deposit account creation with
+            monthly
+          installments.
+        answer: |
+          {
+            "accountNumber": "RD987654321098",
+            "accountType": "Recurring Deposit",
+            "accountName": "Monthly Recurring Deposit",
+            "IFSC Code": "HDFC0000123",
+            "branch": "Bangalore Central",
+            "monthlyInstallment": 10000.00,
+            "tenureMonths": 24,
+            "interestRate": 6.25,
+            "maturityDate": "2026-01-15",
+            "currency": "INR",
+            "status": "ACTIVE",
+            "createdDate": "2024-01-15T15:30:45Z",
+            "customerId": "CUST10011223",
+            "responseCode": "200",
+            "message": "Recurring deposit account created successfully"
+          }
+      - question: >
+          Provide response for senior citizen fixed deposit with special
+          interest rates.
+        answer: |
+          {
+            "accountNumber": "FDSC500123456",
+            "accountType": "Fixed Deposit",
+            "accountName": "Senior Citizen Special FD",
+            "IFSC Code": "ICICI0000456",
+            "branch": "Delhi South Branch",
+            "depositAmount": 800000.00,
+            "tenureMonths": 36,
+            "interestRate": 8.25,
+            "maturityDate": "2027-01-15",
+            "maturityAmount": 1026600.00,
+            "currency": "INR",
+            "status": "ACTIVE",
+            "createdDate": "2024-01-15T16:45:20Z",
+            "customerId": "CUST10033445",
+            "holderAge": 68,
+            "responseCode": "200",
+            "message": "Senior citizen fixed deposit created successfully"
+          }
 
   - context: >
       Generate account creation responses for NRI banking products including NRE
