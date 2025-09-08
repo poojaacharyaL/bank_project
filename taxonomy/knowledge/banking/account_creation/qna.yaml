@@ -418,5 +418,14 @@ seed_examples:
             "message": "Trust savings account created successfully"
           }
 
+document_outline: >
+  Account creation response examples for various Indian banking products
+  including savings, current, fixed deposits, NRI accounts, government schemes,
+  and corporate accounts with successful status codes.
+
+document:
+  repo: https://github.com/poojaacharyaL/bank_project.git
+  commit: 4ff1b4f
+
 patterns:
-  - "knowledge/banking/account_creation/banking_test_data.md"
+  - banking_test_data.md
