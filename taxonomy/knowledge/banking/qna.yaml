@@ -1,0 +1,7 @@
+patterns:
+  - general/banking_test_data.md           # shared data
+  - authentication/registration/account_creation/qna.yaml
+  - authentication/login_logout/qna.yaml
+  - accounts/list_accounts/qna.yaml
+  - accounts/balance_inquiry/qna.yaml
+  - transactions/fund_transfer/qna.yaml
