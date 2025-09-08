@@ -280,7 +280,7 @@ seed_examples:
 document_outline: Registration endpoint payload examples for Indian banking test data
 document:
   repo: https://github.com/poojaacharyaL/bank_project.git
-  commit: efae5d5
+  commit: 4ff1b4f
 patterns:
   - general/banking_test_data.md
 
