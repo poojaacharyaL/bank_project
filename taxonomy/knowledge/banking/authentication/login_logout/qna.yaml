@@ -1,5 +1,5 @@
 version: 3
-domain: banking.knowledge.authentication.login_logout
+domain: banking.authentication.login_logout
 created_by: poojaacharyaL
 seed_examples:
   - context: >
@@ -119,6 +119,7 @@ document:
   repo: https://github.com/poojaacharyaL/bank_project.git
   commit: efae5d5
 patterns:
-  - banking/general/banking_test_data.md
+  - general/banking_test_data.md
+
 
 
