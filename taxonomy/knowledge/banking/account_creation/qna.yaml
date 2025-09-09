@@ -426,6 +426,5 @@ document_outline: >
 document:
   repo: https://github.com/poojaacharyaL/bank_project.git
   commit: 4ff1b4f
-
-patterns:
-  - knowledge/banking/account_creation/banking_test_data.md
+  patterns:
+    - knowledge/banking/account_creation/banking_test_data.md
