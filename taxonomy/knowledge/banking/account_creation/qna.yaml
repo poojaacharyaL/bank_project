@@ -1,14 +1,14 @@
 version: 3
-document:
-  document_outline: >
-    Account creation response examples for various Indian banking products
-    including savings, current, fixed deposits, NRI accounts, government schemes,
-    and corporate accounts with successful status codes.
-  repo: https://github.com/poojaacharyaL/bank_project.git
-  commit: 4ff1b4f
-  patterns:
-    - knowledge/banking/account_creation/banking_test_data.md
-
+domain: banking.account_creation
+created_by: poojaacharyaL
+document_outline: >
+  Account creation response examples for various Indian banking products
+  including savings, current, fixed deposits, NRI accounts, government schemes,
+  and corporate accounts with successful status codes.
+repo: https://github.com/poojaacharyaL/bank_project.git
+commit: 4ff1b4f
+patterns:
+  - knowledge/banking/account_creation/banking_test_data.md
 seed_examples:
   - context: >
       Generate valid response payloads for /api/account_creation endpoint that
